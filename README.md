@@ -54,3 +54,8 @@ Optimization model 3 (used Hyperband):
 Results:  
 ![image](https://github.com/user-attachments/assets/9611c9db-7a9b-4c07-8c74-b26cb64985be)  
 ![image](https://github.com/user-attachments/assets/053428e9-c656-47a7-ae69-0f07b64757d3)  
+
+## Summary
+Overall, the results didn't vary much whether using just one hidden layer with 5 neurons to 5 layers with hundreds of neurons. It didn't help that I didn't have the computing sources to fully run the model (mainly limited to CPU version of tensorflow) so results did take time to find out and would sometimes crash. Model accuracy slightly varied from 0.727 or 0.728 (Bayesian Optimization model). The random search and hyperband models did do slightly better in identifying successful applicants (recall of 0.79) while the initial model did slightly better in identifying unsuccessful applicants (recall of 0.67); however, they didn't do too well overall and not much better than the other. 
+
+Another model that would likely take less time and work well with this binary classification problem is random forest. It's a classical machine learning algorithm that can do pretty well on tabular datasets and inherently models complex interactions between features.
