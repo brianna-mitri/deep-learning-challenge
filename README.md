@@ -34,7 +34,9 @@ Results:
 ![image](https://github.com/user-attachments/assets/be8e9c09-6fa8-4dc4-8853-24f53ea2a7a0)  
 ![image](https://github.com/user-attachments/assets/bbbf595e-7d2f-4e6b-a04d-ba1f271a58c0)
 
-Following attempts at "optimization" involved keras.tuner and giving various options to find the "best" one. Desired accuracy of 75% was not achieved. Here are some of the results.  
+Following attempts at "optimization" involved keras.tuner and giving various options to find the "best" one. Parameters adjusted included learning rates, optimizers, range of neurons, number of layers, and epochs. It seemed like the model was underfitting as accuracy on training and testing were always between 72-73%, however increasing epochs, layers and neurons didn't improve the model. In fact, higher epochs in training (going around 50) would lead to around 74-75% accuracy on the training data but were worse (about 70-72%) for validation accuracy--showing that that was likely leading to overfitting. When trying different tuning parameters, results also didn't show better results. In the end, desired accuracy of 75% was not achieved.
+
+Here are some of the results:  
 Optimization model 1 (used Random Search):  
 ![image](https://github.com/user-attachments/assets/ed7b6f8e-599a-4d37-9196-77fe1b20db00)  
 Results:  
@@ -52,4 +54,3 @@ Optimization model 3 (used Hyperband):
 Results:  
 ![image](https://github.com/user-attachments/assets/9611c9db-7a9b-4c07-8c74-b26cb64985be)  
 ![image](https://github.com/user-attachments/assets/053428e9-c656-47a7-ae69-0f07b64757d3)  
-
